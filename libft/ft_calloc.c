@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/05 09:01:26 by bdekonin       #+#    #+#                */
-/*   Updated: 2019/11/27 17:34:10 by bdekonin      ########   odam.nl         */
+/*   Created: 2019/11/05 09:01:26 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/04/26 20:50:30 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,9 @@ void	*ft_calloc(size_t count, size_t size)
 	char	*str;
 
 	i = 0;
-	str = (char*)malloc(sizeof(char) * (count * size));
-	if (str == NULL)
-		return (0);
-	else
-	{
-		while (i != (count * size))
-		{
-			str[i] = 0;
-			i++;
-		}
-		return (str);
-	}
+	str = malloc(sizeof(char) * (count * size));
+	if (!str)
+		return (NULL);
+	ft_memset(str, 0, count * size);
+	return (str);
 }

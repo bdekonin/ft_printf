@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/05 08:34:30 by bdekonin       #+#    #+#                */
-/*   Updated: 2019/11/27 14:14:08 by bdekonin      ########   odam.nl         */
+/*   Created: 2019/11/05 08:34:30 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/04/26 21:51:08 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strchr(const char *s, int c)
 	while (i < x + 1)
 	{
 		if (str[i] == c)
-			return (&str[i]);
+			return (str + i);
 		i++;
 	}
 	return (0);

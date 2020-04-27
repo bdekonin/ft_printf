@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isalnum.c                                       :+:    :+:            */
+/*   ft_wordcount_bonus.c                               :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/30 08:02:45 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/04/10 20:44:56 by bdekonin      ########   odam.nl         */
+/*   Created: 2020/04/23 11:06:47 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/04/23 11:07:04 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalnum(int c)
+int		ft_wordcount(char *str)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	int		count;
+
+	count = 0;
+	while (*str)
+	{
+		while (*str && (*str == ' ' || *str == '\n' || *str == '\t'))
+			str++;
+		if (*str && *str != ' ' && *str != '\n' && *str != '\t')
+		{
+			count++;
+			while (*str && *str != ' ' && *str != '\n' && *str != '\t')
+				str++;
+		}
+	}
+	return (count);
 }

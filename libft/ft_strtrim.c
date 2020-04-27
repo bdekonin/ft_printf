@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/21 10:45:55 by bdekonin       #+#    #+#                */
-/*   Updated: 2019/11/26 16:01:50 by bdekonin      ########   odam.nl         */
+/*   Created: 2019/11/21 10:45:55 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/04/26 21:44:07 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char			*ft_strtrim(char const *s1, char const *set)
 	if (right - left + 1 < 0)
 		return (ft_strdup(""));
 	str = ft_substr(s1, left, right - left + 1);
-	if (str == NULL)
-		return (0);
+	if (!str)
+		return (NULL);
 	return (str);
 }

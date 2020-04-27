@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isalnum.c                                       :+:    :+:            */
+/*   ft_counter_bonus.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/30 08:02:45 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/04/10 20:44:56 by bdekonin      ########   odam.nl         */
+/*   Created: 2020/02/13 18:34:51 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/04/10 20:52:12 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalnum(int c)
+int	ft_counter(const char *s, char c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	size_t	i;
+	int		count;
+
+	i = 0;
+	count = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			count++;
+		i++;
+	}
+	return (count);
 }
