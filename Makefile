@@ -5,8 +5,8 @@
 #                                                      +:+                     #
 #    By: bdekonin <bdekonin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
-#    Created: 2019/10/29 12:24:22 by bdekonin       #+#    #+#                 #
-#    Updated: 2020/01/17 12:00:20 by bdekonin      ########   odam.nl          #
+#    Created: 2019/10/29 12:24:22 by bdekonin      #+#    #+#                  #
+#    Updated: 2020/04/26 22:01:23 by bdekonin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ bonus: $(NAME)
 
 $(NAME): $(OFILES)
 	@echo "$(YELLOW)[ft_printf] - Compiling libft.$(NOCOLOR)"
-	@$(MAKE) -C libft bonus
+	@$(MAKE) -C libft
 	@mv libft/libft.a $(NAME)
 	@echo "$(YELLOW)[ft_printf] - Merging libft.a with libftprintf.a$(NOCOLOR)"
 	@ar rcs $(NAME) $(OFILES)
