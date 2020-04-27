@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/05 08:07:31 by bdekonin       #+#    #+#                */
-/*   Updated: 2020/01/17 11:44:48 by bdekonin      ########   odam.nl         */
+/*   Created: 2019/11/05 08:07:31 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/04/26 22:00:32 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,6 @@ char				*ft_itoa_long(long long n, t_flag *flags);
 ** All used to print out numbers.
 */
 int					ft_putnbr_flags(long long n, int fd, t_flag *flags);
-int					ft_intlen(long long n, int base);
 void				ft_putnbr_flags_print(char *s, int fd, t_flag *flags);
 void				ft_putnbr_flags_print_negative(char *s, int fd, \
 t_flag *flags);
