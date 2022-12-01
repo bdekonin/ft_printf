@@ -1,22 +1,37 @@
-# Ft_print - @ Codam Coding College
-My own made version of the famous printf. It includes the following specifiers.
-`cspdiuxX%` and also with the following flags `-0.*# +`
+# ft_printf
 
-#### How do I use it?
-You can use it by including the `ft_printf.h` and compile by running `make`.
-This will generate an library called `libftprinf.a`.
+This project is a re-writing of the standard C printf function, with all the same specifiers and flags. It is intended to be used to understand how variadic arguments work. 
 
-So run these commands in order.
-```
-git clone https://github.com/bdekonin/ft_printf.git
-cd ft_printf
-make
-```
-If you include the `libft.h` in your project. You can now compile with the `libft.a` and use my functions
+## Specifiers 
 
-#### Makefile Commands
-- `make` - Used to compile everything. this will make object files and create a library out of it.
-- `make clean` - This will remove any temporary files, including the objects files.
-- `make fclean` - This command will first run `make clean` once finished, it will also remove the `libftprintf.a` file. It will also delete the objects folder.
-- `make re` - This will be used to recompile everything. So it will remove any files it would normally have made. Then compile normally with `make`.
-- `make compile` - Used to compile everything without typing it manually everytime. It will automatically compile with a file called `main.c`
+The following specifiers are supported by this project: 
+- `c`: Character
+- `s`: String
+- `p`: Pointer address
+- `d`: Signed decimal integer
+- `i`: Signed decimal integer
+- `u`: Unsigned decimal integer
+- `x`: Unsigned hexadecimal integer
+- `X`: Unsigned hexadecimal integer (uppercase)
+- `%`: A % followed by another % will write a single % to the stream
+
+## Flags
+
+The following flags are supported:
+- `-`: Left-justify within the given field width
+- `0`: Left-pads the number with zeroes (only when padding with zeroes is specified)
+- `.*`: Precision
+- `#`: Used with o, x or X specifiers the value is preceeded with 0, 0x or 0X respectively for values different than zero
+- `+`: Forces to preceed the result with a plus or minus sign (+ or -) even for positive numbers. By default, only negative numbers are preceded with a - sign.
+
+## Usage
+
+The printf function can be used in the following way: 
+
+`int printf(const char *format, ...);`
+
+Where `format` is a string that contains one or more of the specifiers and flags mentioned above.
+
+For more information on usage and examples, please consult the project documentation. 
+
+Enjoy!
