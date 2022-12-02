@@ -1,5 +1,7 @@
 # ft_printf
 
+[![CodeFactor](https://www.codefactor.io/repository/github/bdekonin/ft_printf/badge)](https://www.codefactor.io/repository/github/bdekonin/ft_printf)
+
 This project is a re-writing of the standard C printf function, with all the same specifiers and flags. It is intended to be used to understand how variadic arguments work. 
 
 ## Specifiers 
